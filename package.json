@@ -1,0 +1,22 @@
+{
+	"name": "new_project",
+	"version": "1.0.0",
+	"description": "",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "Alexandr Krakovsky",
+	"license": "ISC",
+	"dependencies": {
+		"browser-sync": "latest",
+		"gulp": "latest",
+		"gulp-autoprefixer": "latest",
+		"gulp-imagemin": "latest",
+		"gulp-rigger": "latest",
+		"gulp-sass": "^4.0.2",
+		"gulp-uglify": "latest",
+		"gulp-watch": "latest",
+		"imagemin-pngquant": "latest",
+		"rimraf": "latest"
+	}
+}

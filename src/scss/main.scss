@@ -1,0 +1,54 @@
+$main-color-for-blocks_greey: #696969;
+$main-color-for-btns: #ff8900;
+
+@import 'fonts';
+@import 'header';
+@import 'footer';
+
+* {
+	margin:0;
+	padding: 0;
+}
+
+body {
+	font-family: Roboto-Regular;
+}
+
+ul {
+	margin:0;
+}
+
+.container {
+	width: 1360px;
+	margin: auto;
+	min-height: 100%;
+}
+
+.flex-cont-space-betwn{
+	display: flex;
+	justify-content: space-between;
+}
+
+.flex-item-center{
+	display: flex;
+	align-items: center;
+}
+
+.custom-btn {
+	text-decoration: none;
+	font-size: 12px;
+	text-transform: uppercase;
+	color:#fff;
+	display: flex;
+	background: $main-color-for-btns;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+}
+
+.col-24 {
+	width: 24%;
+	margin-right: 18px;
+}
+
+@import 'media-requests';

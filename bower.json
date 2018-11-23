@@ -1,0 +1,21 @@
+{
+  "name": "new_project",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Alexandr Krakovsky"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/Krakovsky/new_proj_gulp",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "bootstrap": "latest",
+    "jquery": "latest"
+  }
+}

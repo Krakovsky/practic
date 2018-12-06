@@ -66,7 +66,7 @@ gulp.task('js', function () {
 
 gulp.task('style', function () {
     gulp.src(path.src.scss) //Выберем наш main.scss
-        .pipe(sass()) //Скомпилируем
+        .pipe(sass().on('error', sass.logError)) //Скомпилируем
         .pipe(prefixer()) //Добавим вендорные префиксы
         .pipe(gulp.dest(path.build.css)) //И в build
         .pipe(reload({stream: true}));

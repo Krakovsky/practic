@@ -619,8 +619,41 @@ aside {
 .tabs {
 	padding: 24px 0 24px 36px;
 	display: inline-block;
+
+	select {
+		width: 222px;
+		height: 40px;
+		color: #9c9c9c;
+		font-size: 14px;
+		font-family: Roboto-Regular;
+		-webkit-appearance: none;
+		background-image: url('../img/select-arrow.png');
+		background-position: 90% center;
+		background-repeat: no-repeat;
+		padding-left: 14px;
+		/* for FF */
+		-moz-appearance: none;
+		text-indent: 0.01px; 
+		text-overflow: '';
+		/* for IE */
+		-ms-appearance: none;
+		appearance: none!important;
+		position: relative;
+	}
 }
 
+.select-wrapper {
+	position: relative;
+
+	&::before {
+		content: "";
+		width: 222px;
+		height: 10px;
+		position: absolute;
+		bottom: -2px;
+		border-bottom: 1px solid #fff;
+	}
+}
 
 
 

@@ -219,3 +219,89 @@ nav{
 		transform: rotate(-45deg);
 	}
 }
+
+.menu__btn {
+    position: relative;
+    display: none;
+    width: 40px;
+    border-radius: 0;
+
+    transition: border-radius 300ms ease;
+
+    &:hover {
+        border-radius: 50%;
+    }
+
+    &.is-open {
+        .menu__burger {
+            opacity: 0;
+            transform: translateX(45px);
+        }
+
+        .menu__exit {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+}
+
+.menu__burger,
+.menu__burger:before,
+.menu__burger:after {
+    display: block;
+    content: '';
+    width: 30px;
+    height: 4px;
+    background-color: white;
+    position: absolute;
+}
+
+.menu__burger {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+
+    transition: opacity 300ms ease, transform 300ms ease;
+
+    &:before {
+        top: -8px;
+    }
+
+    &:after {
+        top: 8px;
+    }
+}
+
+.menu__exit:before,
+.menu__exit:after {
+    display: block;
+    content: '';
+    width: 22px;
+    height: 3px;
+    background-color: white;
+    position: absolute;
+}
+
+.menu__exit {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -25%;
+    transform: translateX(-45px);
+    opacity: 0;
+
+    transition: opacity 300ms ease, transform 300ms ease;
+
+    &:before {
+        transform: rotate(45deg);
+    }
+
+    &:after {
+        transform: rotate(-45deg);
+    }
+}
+
+.head-menu {
+	display: flex;
+}

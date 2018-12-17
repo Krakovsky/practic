@@ -33,4 +33,34 @@ $(document).ready(function() {
 		$(".overlay").toggle();
 	});
 
+	$(".ico-burger").click(function(){
+		$(".menu-aside").toggle("slow");
+	});
+
+	var _createClass = function () {function defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}return function (Constructor, protoProps, staticProps) {if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;};}();function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}var MenuHandler = function () {
+		function MenuHandler() {_classCallCheck(this, MenuHandler);
+			this.menuTrigger = $('#menu-trigger');
+
+			this.toggleMenu();
+		}_createClass(MenuHandler, [{ key: 'toggleMenu', value: function toggleMenu()
+
+			{var _this = this;
+				this.menuTrigger.on('click', function () {
+					_this.menuTrigger.toggleClass('is-open');
+					_this.menu.toggleClass('is-open');
+				});
+			} }]);return MenuHandler;}();
+
+
+		$(document).ready(function ($) {
+			var menuHandler = new MenuHandler('.menu');
+		});
+
+    $("#menu-trigger").click(function(){
+    	if(	$(this).next().css("display") === "none") {
+    		$(this).next().css("display", "flex");
+    	} else {
+    		$(this).next().css("display", "none");
+    	}
+    });
 });
